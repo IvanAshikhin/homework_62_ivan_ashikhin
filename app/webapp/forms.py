@@ -64,3 +64,9 @@ class ProjectTaskForm(forms.ModelForm):
 
 class SearchForm(forms.Form):
     search = forms.CharField(max_length=20, required=False, label='Find')
+
+
+class AddProjectUserForm(forms.ModelForm):
+    class Meta:
+        model = Project
+        fields = ['users']
