@@ -1,0 +1,896 @@
+[
+{
+    "model": "webapp.status",
+    "pk": 1,
+    "fields": {
+        "name": "new"
+    }
+},
+{
+    "model": "webapp.status",
+    "pk": 2,
+    "fields": {
+        "name": "in progress"
+    }
+},
+{
+    "model": "webapp.status",
+    "pk": 3,
+    "fields": {
+        "name": "done"
+    }
+},
+{
+    "model": "webapp.type",
+    "pk": 1,
+    "fields": {
+        "name": "task"
+    }
+},
+{
+    "model": "webapp.type",
+    "pk": 3,
+    "fields": {
+        "name": "bug"
+    }
+},
+{
+    "model": "webapp.type",
+    "pk": 4,
+    "fields": {
+        "name": "enhancement"
+    }
+},
+{
+    "model": "webapp.project",
+    "pk": 1,
+    "fields": {
+        "start_date": "2023-03-02",
+        "end_date": null,
+        "name": "Shop",
+        "description": "kaspi"
+    }
+},
+{
+    "model": "webapp.project",
+    "pk": 2,
+    "fields": {
+        "start_date": "2023-03-22",
+        "end_date": "2023-03-10",
+        "name": "Python",
+        "description": "Super"
+    }
+},
+{
+    "model": "webapp.project",
+    "pk": 3,
+    "fields": {
+        "start_date": "2023-03-14",
+        "end_date": "2023-03-31",
+        "name": "KOLESA.KZ",
+        "description": "Создать сайт колеса"
+    }
+},
+{
+    "model": "webapp.project",
+    "pk": 4,
+    "fields": {
+        "start_date": "2023-03-04",
+        "end_date": "2023-03-31",
+        "name": "sfsdf",
+        "description": "sdfsdf"
+    }
+},
+{
+    "model": "webapp.project",
+    "pk": 5,
+    "fields": {
+        "start_date": "2023-04-01",
+        "end_date": "2023-03-23",
+        "name": "роолргшолр",
+        "description": "ороршоршолргшо"
+    }
+},
+{
+    "model": "webapp.task",
+    "pk": 1,
+    "fields": {
+        "summary": "Писать код",
+        "description": "Писать код очень усердно два часа",
+        "status": 3,
+        "created_at": "2023-03-02T07:15:23.751Z",
+        "edit_time": "2023-03-02T07:15:23.741Z",
+        "is_deleted": false,
+        "project": 1,
+        "type": [
+            1
+        ]
+    }
+},
+{
+    "model": "webapp.task",
+    "pk": 2,
+    "fields": {
+        "summary": "Покушать",
+        "description": "Вкусную пиицу",
+        "status": 3,
+        "created_at": "2023-03-02T13:44:20.756Z",
+        "edit_time": "2023-03-07T13:21:13.140Z",
+        "is_deleted": false,
+        "project": 1,
+        "type": [
+            3
+        ]
+    }
+},
+{
+    "model": "webapp.task",
+    "pk": 3,
+    "fields": {
+        "summary": "Кино",
+        "description": "Боевик посмотреть",
+        "status": 3,
+        "created_at": "2023-03-02T13:45:23.613Z",
+        "edit_time": null,
+        "is_deleted": false,
+        "project": 1,
+        "type": [
+            1
+        ]
+    }
+},
+{
+    "model": "webapp.task",
+    "pk": 4,
+    "fields": {
+        "summary": "Тренировка",
+        "description": "Покачать бицепс",
+        "status": 3,
+        "created_at": "2023-03-10T09:28:53.539Z",
+        "edit_time": null,
+        "is_deleted": true,
+        "project": 1,
+        "type": []
+    }
+},
+{
+    "model": "webapp.task",
+    "pk": 5,
+    "fields": {
+        "summary": "Исправить всякие проблемы",
+        "description": "Найти и справить ошибки",
+        "status": 2,
+        "created_at": "2023-03-02T14:01:51.391Z",
+        "edit_time": null,
+        "is_deleted": false,
+        "project": 1,
+        "type": []
+    }
+},
+{
+    "model": "webapp.task",
+    "pk": 6,
+    "fields": {
+        "summary": "аааааааа",
+        "description": "аааааааааа",
+        "status": 3,
+        "created_at": "2023-03-03T07:15:39.107Z",
+        "edit_time": "2023-03-07T07:15:39.105Z",
+        "is_deleted": false,
+        "project": 1,
+        "type": [
+            1
+        ]
+    }
+},
+{
+    "model": "webapp.task",
+    "pk": 9,
+    "fields": {
+        "summary": "Кино",
+        "description": "bnjklhglygl",
+        "status": 3,
+        "created_at": "2023-03-09T18:41:20.156Z",
+        "edit_time": "2023-03-02T17:38:43.575Z",
+        "is_deleted": true,
+        "project": 1,
+        "type": [
+            4
+        ]
+    }
+},
+{
+    "model": "webapp.task",
+    "pk": 10,
+    "fields": {
+        "summary": "Покушать",
+        "description": "vmvmvm",
+        "status": 1,
+        "created_at": "2023-03-07T04:52:57.728Z",
+        "edit_time": null,
+        "is_deleted": false,
+        "project": 1,
+        "type": [
+            1
+        ]
+    }
+},
+{
+    "model": "webapp.task",
+    "pk": 11,
+    "fields": {
+        "summary": "Писать код",
+        "description": "долго",
+        "status": 3,
+        "created_at": "2023-03-02T07:24:36.200Z",
+        "edit_time": "2023-03-02T07:24:36.190Z",
+        "is_deleted": false,
+        "project": 1,
+        "type": [
+            3
+        ]
+    }
+},
+{
+    "model": "webapp.task",
+    "pk": 12,
+    "fields": {
+        "summary": "Смотреть телевизор",
+        "description": "смотреть любимую прогграмму",
+        "status": 2,
+        "created_at": "2023-03-07T06:41:50.761Z",
+        "edit_time": null,
+        "is_deleted": false,
+        "project": 1,
+        "type": [
+            4
+        ]
+    }
+},
+{
+    "model": "webapp.task",
+    "pk": 13,
+    "fields": {
+        "summary": "Выпить лекарство",
+        "description": "Выпить сироп от кашля",
+        "status": 3,
+        "created_at": "2023-03-04T07:15:46.989Z",
+        "edit_time": "2023-03-07T07:15:46.979Z",
+        "is_deleted": false,
+        "project": 1,
+        "type": [
+            3
+        ]
+    }
+},
+{
+    "model": "webapp.task",
+    "pk": 14,
+    "fields": {
+        "summary": "Чекнуть ошибки",
+        "description": "Посмотреть и исправить ошибки",
+        "status": 2,
+        "created_at": "2023-03-07T06:44:45.914Z",
+        "edit_time": null,
+        "is_deleted": false,
+        "project": 1,
+        "type": [
+            3
+        ]
+    }
+},
+{
+    "model": "webapp.task",
+    "pk": 15,
+    "fields": {
+        "summary": "Писать контрольную и искать проблемы",
+        "description": "Писать контрольную и искать проблемы",
+        "status": 3,
+        "created_at": "2023-03-02T07:08:37.412Z",
+        "edit_time": "2023-03-02T13:20:33.410Z",
+        "is_deleted": false,
+        "project": 1,
+        "type": [
+            3
+        ]
+    }
+},
+{
+    "model": "webapp.task",
+    "pk": 16,
+    "fields": {
+        "summary": "Учить Пайтон",
+        "description": "ыаыаыаыа",
+        "status": 1,
+        "created_at": "2023-03-07T07:30:00.924Z",
+        "edit_time": null,
+        "is_deleted": false,
+        "project": 1,
+        "type": [
+            3
+        ]
+    }
+},
+{
+    "model": "webapp.task",
+    "pk": 17,
+    "fields": {
+        "summary": "Исправить всякие проблемы",
+        "description": "выаывавыxvxvxv",
+        "status": 2,
+        "created_at": "2023-03-09T17:41:06.378Z",
+        "edit_time": null,
+        "is_deleted": false,
+        "project": 1,
+        "type": [
+            4
+        ]
+    }
+},
+{
+    "model": "webapp.task",
+    "pk": 19,
+    "fields": {
+        "summary": "Проверять домашку",
+        "description": "ываываыва",
+        "status": 3,
+        "created_at": "2023-03-07T13:46:29.170Z",
+        "edit_time": "2023-03-07T13:46:29.160Z",
+        "is_deleted": false,
+        "project": 1,
+        "type": [
+            4
+        ]
+    }
+},
+{
+    "model": "webapp.task",
+    "pk": 20,
+    "fields": {
+        "summary": "Искать ошибку",
+        "description": "даааааа",
+        "status": 1,
+        "created_at": "2023-03-09T18:41:24.264Z",
+        "edit_time": null,
+        "is_deleted": true,
+        "project": 1,
+        "type": [
+            3
+        ]
+    }
+},
+{
+    "model": "webapp.task",
+    "pk": 21,
+    "fields": {
+        "summary": "Сложная ошибка",
+        "description": "чсмчсмчсмчм",
+        "status": 2,
+        "created_at": "2023-03-07T07:32:23.324Z",
+        "edit_time": null,
+        "is_deleted": false,
+        "project": 1,
+        "type": [
+            3
+        ]
+    }
+},
+{
+    "model": "webapp.task",
+    "pk": 22,
+    "fields": {
+        "summary": "Читать сложные ошибки",
+        "description": "ыавывпывппв",
+        "status": 2,
+        "created_at": "2023-03-07T07:32:45.772Z",
+        "edit_time": null,
+        "is_deleted": false,
+        "project": 1,
+        "type": [
+            3
+        ]
+    }
+},
+{
+    "model": "webapp.task",
+    "pk": 23,
+    "fields": {
+        "summary": "Покушать",
+        "description": "gdgdfgdfg",
+        "status": 1,
+        "created_at": "2023-03-09T17:37:44.370Z",
+        "edit_time": null,
+        "is_deleted": false,
+        "project": 1,
+        "type": [
+            1
+        ]
+    }
+},
+{
+    "model": "webapp.task",
+    "pk": 24,
+    "fields": {
+        "summary": "Купит кофе",
+        "description": "32",
+        "status": 1,
+        "created_at": "2023-03-09T17:38:25.002Z",
+        "edit_time": null,
+        "is_deleted": false,
+        "project": 1,
+        "type": [
+            3
+        ]
+    }
+},
+{
+    "model": "webapp.task",
+    "pk": 26,
+    "fields": {
+        "summary": "BBBBB",
+        "description": "KDLKSDD",
+        "status": 3,
+        "created_at": "2023-03-10T02:33:35.203Z",
+        "edit_time": null,
+        "is_deleted": false,
+        "project": 2,
+        "type": []
+    }
+},
+{
+    "model": "webapp.task",
+    "pk": 27,
+    "fields": {
+        "summary": "Попить кофе",
+        "description": "12313123",
+        "status": 1,
+        "created_at": "2023-03-10T06:26:30.944Z",
+        "edit_time": null,
+        "is_deleted": false,
+        "project": 1,
+        "type": [
+            3
+        ]
+    }
+},
+{
+    "model": "webapp.task",
+    "pk": 28,
+    "fields": {
+        "summary": "цуккцук",
+        "description": "ывааываыва",
+        "status": 2,
+        "created_at": "2023-03-10T06:27:07.913Z",
+        "edit_time": null,
+        "is_deleted": false,
+        "project": 1,
+        "type": [
+            4
+        ]
+    }
+},
+{
+    "model": "webapp.task",
+    "pk": 29,
+    "fields": {
+        "summary": "цукцукц",
+        "description": "цукцк",
+        "status": 2,
+        "created_at": "2023-03-10T07:01:29.066Z",
+        "edit_time": null,
+        "is_deleted": false,
+        "project": 1,
+        "type": [
+            4
+        ]
+    }
+},
+{
+    "model": "webapp.task",
+    "pk": 30,
+    "fields": {
+        "summary": "укеуе",
+        "description": "укеуке",
+        "status": 2,
+        "created_at": "2023-03-10T07:05:24.345Z",
+        "edit_time": null,
+        "is_deleted": false,
+        "project": 1,
+        "type": [
+            4
+        ]
+    }
+},
+{
+    "model": "webapp.task",
+    "pk": 31,
+    "fields": {
+        "summary": "укеуке",
+        "description": "укеуке",
+        "status": 1,
+        "created_at": "2023-03-10T07:06:34.136Z",
+        "edit_time": null,
+        "is_deleted": true,
+        "project": 1,
+        "type": [
+            1
+        ]
+    }
+},
+{
+    "model": "webapp.task",
+    "pk": 32,
+    "fields": {
+        "summary": "dfg",
+        "description": "dfg",
+        "status": 2,
+        "created_at": "2023-03-10T07:09:41.596Z",
+        "edit_time": null,
+        "is_deleted": false,
+        "project": 1,
+        "type": [
+            4
+        ]
+    }
+},
+{
+    "model": "webapp.task",
+    "pk": 33,
+    "fields": {
+        "summary": "fdsdfs",
+        "description": "fsdfsdf",
+        "status": 1,
+        "created_at": "2023-03-10T07:11:22.925Z",
+        "edit_time": null,
+        "is_deleted": false,
+        "project": 1,
+        "type": [
+            4
+        ]
+    }
+},
+{
+    "model": "webapp.task",
+    "pk": 34,
+    "fields": {
+        "summary": "Кино",
+        "description": "wer",
+        "status": 1,
+        "created_at": "2023-03-10T07:15:12.586Z",
+        "edit_time": null,
+        "is_deleted": true,
+        "project": 1,
+        "type": [
+            4
+        ]
+    }
+},
+{
+    "model": "webapp.task",
+    "pk": 35,
+    "fields": {
+        "summary": "wrwer",
+        "description": "werwer",
+        "status": 1,
+        "created_at": "2023-03-10T07:28:17.740Z",
+        "edit_time": null,
+        "is_deleted": false,
+        "project": 1,
+        "type": [
+            4
+        ]
+    }
+},
+{
+    "model": "webapp.task",
+    "pk": 36,
+    "fields": {
+        "summary": "ыаыва",
+        "description": "ываыва",
+        "status": 2,
+        "created_at": "2023-03-10T07:42:03.808Z",
+        "edit_time": null,
+        "is_deleted": false,
+        "project": 1,
+        "type": [
+            4
+        ]
+    }
+},
+{
+    "model": "webapp.task",
+    "pk": 37,
+    "fields": {
+        "summary": "asdas",
+        "description": "asdad",
+        "status": 3,
+        "created_at": "2023-03-10T07:58:07.530Z",
+        "edit_time": null,
+        "is_deleted": false,
+        "project": 1,
+        "type": [
+            3
+        ]
+    }
+},
+{
+    "model": "webapp.task",
+    "pk": 38,
+    "fields": {
+        "summary": "weqwr",
+        "description": "rqwqwr",
+        "status": 2,
+        "created_at": "2023-03-10T08:04:39.152Z",
+        "edit_time": null,
+        "is_deleted": false,
+        "project": 1,
+        "type": [
+            1
+        ]
+    }
+},
+{
+    "model": "webapp.task",
+    "pk": 39,
+    "fields": {
+        "summary": "кен",
+        "description": "кен",
+        "status": 2,
+        "created_at": "2023-03-10T08:11:44.932Z",
+        "edit_time": null,
+        "is_deleted": true,
+        "project": 1,
+        "type": [
+            4
+        ]
+    }
+},
+{
+    "model": "webapp.task",
+    "pk": 40,
+    "fields": {
+        "summary": "кцукцук",
+        "description": "цукцук",
+        "status": 2,
+        "created_at": "2023-03-10T08:36:34.730Z",
+        "edit_time": null,
+        "is_deleted": false,
+        "project": 1,
+        "type": [
+            4
+        ]
+    }
+},
+{
+    "model": "webapp.task",
+    "pk": 41,
+    "fields": {
+        "summary": "345345",
+        "description": "345345345",
+        "status": 2,
+        "created_at": "2023-03-10T09:42:50.261Z",
+        "edit_time": null,
+        "is_deleted": true,
+        "project": 4,
+        "type": []
+    }
+},
+{
+    "model": "webapp.task",
+    "pk": 42,
+    "fields": {
+        "summary": "ert",
+        "description": "wer",
+        "status": 3,
+        "created_at": "2023-03-10T09:25:55.615Z",
+        "edit_time": null,
+        "is_deleted": false,
+        "project": 4,
+        "type": []
+    }
+},
+{
+    "model": "webapp.task",
+    "pk": 43,
+    "fields": {
+        "summary": "фыв",
+        "description": "ыфв",
+        "status": 1,
+        "created_at": "2023-03-10T09:27:08.974Z",
+        "edit_time": null,
+        "is_deleted": false,
+        "project": 4,
+        "type": []
+    }
+},
+{
+    "model": "webapp.task",
+    "pk": 44,
+    "fields": {
+        "summary": "мпапаепн",
+        "description": "роапопрапро",
+        "status": 1,
+        "created_at": "2023-03-10T09:28:46.008Z",
+        "edit_time": null,
+        "is_deleted": false,
+        "project": 4,
+        "type": []
+    }
+},
+{
+    "model": "webapp.task",
+    "pk": 45,
+    "fields": {
+        "summary": "fsfsf",
+        "description": "sdsdfsdfsdf",
+        "status": 1,
+        "created_at": "2023-03-10T09:43:18.060Z",
+        "edit_time": null,
+        "is_deleted": true,
+        "project": 3,
+        "type": []
+    }
+},
+{
+    "model": "webapp.task",
+    "pk": 46,
+    "fields": {
+        "summary": "wetwetwet",
+        "description": "rwerwrwr",
+        "status": 2,
+        "created_at": "2023-03-10T09:43:13.324Z",
+        "edit_time": null,
+        "is_deleted": true,
+        "project": 3,
+        "type": []
+    }
+},
+{
+    "model": "webapp.task",
+    "pk": 47,
+    "fields": {
+        "summary": "asdasd",
+        "description": "asdasdad",
+        "status": 2,
+        "created_at": "2023-03-10T09:43:28.539Z",
+        "edit_time": null,
+        "is_deleted": true,
+        "project": 4,
+        "type": []
+    }
+},
+{
+    "model": "webapp.task",
+    "pk": 48,
+    "fields": {
+        "summary": "zxczxczxc",
+        "description": "zxczxczxczcsdf",
+        "status": 2,
+        "created_at": "2023-03-10T10:00:55.870Z",
+        "edit_time": null,
+        "is_deleted": false,
+        "project": 4,
+        "type": [
+            4
+        ]
+    }
+},
+{
+    "model": "webapp.task",
+    "pk": 49,
+    "fields": {
+        "summary": "dfasdgdfsghdfsg",
+        "description": "gfdgsdgsdgfsdg",
+        "status": 1,
+        "created_at": "2023-03-10T09:43:54.429Z",
+        "edit_time": null,
+        "is_deleted": false,
+        "project": 4,
+        "type": []
+    }
+},
+{
+    "model": "webapp.task",
+    "pk": 50,
+    "fields": {
+        "summary": "KASKALSKALSKALSK",
+        "description": "sdfsdfsdf",
+        "status": 1,
+        "created_at": "2023-03-10T09:45:00.281Z",
+        "edit_time": null,
+        "is_deleted": true,
+        "project": 4,
+        "type": []
+    }
+},
+{
+    "model": "webapp.task",
+    "pk": 51,
+    "fields": {
+        "summary": "нурлан",
+        "description": "ролпипрвареваеварвчр",
+        "status": 2,
+        "created_at": "2023-03-10T09:49:48.958Z",
+        "edit_time": null,
+        "is_deleted": true,
+        "project": 5,
+        "type": []
+    }
+},
+{
+    "model": "webapp.task",
+    "pk": 52,
+    "fields": {
+        "summary": "sdfsdf",
+        "description": "sdfsdfsdfsdf",
+        "status": 3,
+        "created_at": "2023-03-10T10:01:08.568Z",
+        "edit_time": null,
+        "is_deleted": true,
+        "project": 1,
+        "type": [
+            4
+        ]
+    }
+},
+{
+    "model": "webapp.task",
+    "pk": 53,
+    "fields": {
+        "summary": "hel;ooooo23231",
+        "description": "ds",
+        "status": 2,
+        "created_at": "2023-03-10T10:01:39.809Z",
+        "edit_time": null,
+        "is_deleted": true,
+        "project": 1,
+        "type": [
+            4
+        ]
+    }
+},
+{
+    "model": "webapp.task",
+    "pk": 54,
+    "fields": {
+        "summary": "wefwef",
+        "description": "wfwefwe",
+        "status": 1,
+        "created_at": "2023-03-10T10:01:55.014Z",
+        "edit_time": null,
+        "is_deleted": false,
+        "project": 3,
+        "type": []
+    }
+},
+{
+    "model": "webapp.task",
+    "pk": 55,
+    "fields": {
+        "summary": "mimimii",
+        "description": "eqweq",
+        "status": 1,
+        "created_at": "2023-03-10T10:02:21.638Z",
+        "edit_time": null,
+        "is_deleted": true,
+        "project": 3,
+        "type": []
+    }
+},
+{
+    "model": "webapp.task",
+    "pk": 56,
+    "fields": {
+        "summary": "выыава",
+        "description": "ываываыва",
+        "status": 1,
+        "created_at": "2023-03-17T09:03:26.191Z",
+        "edit_time": null,
+        "is_deleted": false,
+        "project": 3,
+        "type": [
+            4
+        ]
+    }
+}
+]

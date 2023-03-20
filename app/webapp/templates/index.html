@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% block menu %}
+    {% if user.is_authenticated %}
+    <li><a href="{% url 'task_add' %}">Add Task</a></li>
+    <li><a href="{% url 'index_projects' %}">Projects</a></li>
+    {% endif %}
+{% endblock %}
+{% block content %}
+    <h1 class='task'>Tasks:</h1>
+    <hr/>
+        <nav class="navbar bg-body-tertiary">
+        <div class="container-fluid">
+            <form class="d-flex" role="search" method="GET">
+                <input class="form-control me-2" type="search" name="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-primary" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+    {% for task in tasks %}
+        <h2>{{ task.summary }}</h2>
+        <div>{{ task.description }}</div>
+        <div>{{ task.status }}</div>
+        {% for task_type in task.type.all %}
+            <div>{{ task_type }}</div>
+        {% endfor %}
+        <div>{{ task.created_at }}</div>
+        <p><a href="{% url 'detail_task' task.pk %}">More...</a></p>
+        <hr/>
+        {% empty  %}
+        <p class="not_found">NOT FOUND 404</p>
+    {% endfor %}
+    {% if is_paginated %}
+        {% include 'particial/pagination.html' %}
+    {% endif %}
+{% endblock %}
+
+

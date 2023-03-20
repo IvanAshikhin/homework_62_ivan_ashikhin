@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block title %}{{ projects.name }}{% endblock %}
+{% block menu %}
+ <li><a href="{% url 'project_task_add' pk=projects.pk %}">Add Task</a></li>
+{% endblock %}
+{% block content %}
+    <h1 class="detail">Name: {{ projects.name }}</h1>
+    <p class="detail_desc">Description: {{ projects.description }}</p>
+    <p class="details">Start: {{ projects.start_date }}</p>
+    <p class="details">Finish: {{ projects.end_date }}</p>
+    <h2>Tasks:</h2>
+    {% for task in tasks %}
+    <p class="detail_desc">Summary: {{ task.summary }}</p>
+    <p class="details">Description: {{ task.description }}</p>
+    <p class="details">Status: {{ task.status }}</p>
+    {% for task_type in task.type.all %}
+        <p class="details">Type: {{ task_type }}</p>
+    {% endfor %}
+    <p class="details">Created at: {{ task.created_at }}</p>
+    <p class="details">Edit time: {{ task.edit_time }}</p>
+    <p><a href="{% url 'detail_task' task.pk %}">More...</a></p>
+    {% endfor %}
+{% endblock %}
