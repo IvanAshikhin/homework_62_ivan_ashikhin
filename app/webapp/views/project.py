@@ -1,10 +1,11 @@
-from django.shortcuts import redirect, get_object_or_404
-from django.urls import reverse
-from django.views.generic import ListView, DetailView, CreateView
+from django.contrib.auth.models import User
+from django.shortcuts import redirect, get_object_or_404, render
+from django.urls import reverse, reverse_lazy
+from django.views.generic import ListView, DetailView, CreateView, DeleteView
 
 from webapp.models.project import Project
 from webapp.models import Task
-from webapp.forms import ProjectForm
+from webapp.forms import ProjectForm, AddProjectUserForm
 
 from webapp.forms import ProjectTaskForm
 
@@ -24,6 +25,7 @@ class ProjectDetail(DetailView):
         context = super().get_context_data(**kwargs)
         project = self.get_object()
         context['tasks'] = Task.objects.filter(project=project.pk).exclude(is_deleted=True)
+        context['users'] = project.users.all()
         return context
 
 
@@ -64,3 +66,45 @@ class ProjectTaskAddView(CreateView):
         task.project_id = project_id
         task.save()
         return redirect('index_page')
+
+
+class AddProjectUsers(CreateView):
+    model = Project
+    form_class = AddProjectUserForm
+    success_url = reverse_lazy('index_projects')
+    template_name = 'add_user_to_project.html'
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['project'] = self.get_object()
+        context['users'] = User.objects.all()
+        return context
+
+    def form_valid(self, form):
+        user_id = self.request.POST.get('user_id')
+        user = get_object_or_404(User, pk=user_id)
+        project = self.get_object()
+        project.users.add(user)
+        return redirect('project_detail', project.pk)
+
+
+class DeleteProjectMember(DeleteView):
+    model = Project
+    success_url = reverse_lazy('index_projects')
+    template_name = 'delete_project_member.html'
+
+    def get_object(self):
+        return get_object_or_404(Project, pk=self.kwargs['pk'])
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['project'] = self.get_object()
+        context['users'] = User.objects.all()
+        return context
+
+    def form_valid(self, form):
+        user_id = self.request.POST.get('user_id')
+        user = get_object_or_404(User, pk=user_id)
+        project = self.get_object()
+        project.users.remove(user)
+        return redirect('project_detail', project.pk)
